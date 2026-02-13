@@ -24,6 +24,18 @@ public class PathFinding : MonoBehaviour
     }
     public List<Nodes> GetPath(Nodes starNode, Nodes endNode)
     {
+        if (GameManager.Instance == null)
+        {
+            Debug.LogError("GameManager.Instance es NULL");
+            return null;
+        }
+
+        if (GameManager.Instance.allNodes == null)
+        {
+            Debug.LogError("allNodes es NULL");
+            return null;
+        }
+
 
         foreach (var node in GameManager.Instance.allNodes)
         {

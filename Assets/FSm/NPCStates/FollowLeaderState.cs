@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FollowLeaderState : BaseStates<EnemyStates,Enemy>
@@ -21,7 +19,7 @@ public class FollowLeaderState : BaseStates<EnemyStates,Enemy>
         Vector3 directionToLeader = targetLeader - avatar.transform.position;
 
         //Direccion deseada sumando todos los vectores.
-        directionToLeader += Separation().normalized*avatar.SeparationWeight + SeparationLeader().normalized*avatar.SeparationWeightLeader+ ObstacleAvoindance().normalized*avatar.obstacleWeight;
+        directionToLeader += Separation().normalized * avatar.SeparationWeight + SeparationLeader().normalized * avatar.SeparationWeightLeader + ObstacleAvoindance() * avatar.obstacleWeight; //ACA SAQUE EL .Normalized que tenia el ObstacleAvoindance()
 
         //Lerpeo entre mi direccion y la direccion deseada.
         var newDirection = Vector3.Lerp(avatar.transform.right, directionToLeader, avatar.speedDirection);
@@ -34,6 +32,7 @@ public class FollowLeaderState : BaseStates<EnemyStates,Enemy>
         if(targetpath)
         {
             avatar.transform.position += newDirection.normalized * Time.deltaTime * avatar.speedLeader;
+
 
         }else
         {
@@ -174,7 +173,11 @@ public class FollowLeaderState : BaseStates<EnemyStates,Enemy>
             Nodes start = GameManager.Instance.GetNearestNode(avatar.transform.position, GameManager.Instance.allNodes);
             Nodes target = GameManager.Instance.GetNearestNode(targetLeader, GameManager.Instance.allNodes);
 
-
+            if (start == null || target == null)
+            {
+                Debug.LogError("start o target node es NULL"); //AGREGE ESTE DEBUG ERROR POR SI HAY QUE ARREGLAR ESTO DESPUES
+                return;
+            }
 
             avatar._path = PathFinding.Instace.GetPath(start, target);
 
@@ -187,9 +190,11 @@ public class FollowLeaderState : BaseStates<EnemyStates,Enemy>
 
 
         var dir = (avatar._path[0].transform.position - avatar.transform.position);
-        avatar.transform.position += dir.normalized * avatar.speedLeader * Time.deltaTime;
+        //avatar.transform.position += dir.normalized * avatar.speedLeader * Time.deltaTime; //ESTA LINEA ESTABA ANTES, LAS DE ABAJO SON LAS QUE REEMPLAZAN A ESTA
 
-        
+        Vector3 desired = dir.normalized + ObstacleAvoindance() * avatar.obstacleWeight;
+        avatar.transform.position += desired.normalized * avatar.speedLeader * Time.deltaTime;
+
 
         if (dir.magnitude < 0.8f)
         {

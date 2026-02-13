@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1804,6 +1804,14 @@ PrefabInstance:
       propertyPath: LeaderB
       value: 
       objectReference: {fileID: 1097357891}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: _energy
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: speedDirection
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
 --- !u!1 &449353886
@@ -2114,12 +2122,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1097357891}
     - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: _energy
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: Aceleration
       value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: obstacleWeight
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: speedDirection
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
@@ -4786,6 +4802,14 @@ PrefabInstance:
       propertyPath: LeaderB
       value: 
       objectReference: {fileID: 1097357891}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: _energy
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: speedDirection
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
 --- !u!1 &1309118011
@@ -5658,8 +5682,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1097357891}
     - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: _energy
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: obstacleWeight
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: speedDirection
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
@@ -5944,11 +5976,15 @@ PrefabInstance:
       objectReference: {fileID: 1097357891}
     - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: _energy
-      value: 30
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: AttackVelocity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: speedDirection
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
@@ -6775,11 +6811,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7236328462879324498, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.42
+      value: 23.4
       objectReference: {fileID: 0}
     - target: {fileID: 7236328462879324498, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.47
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 7236328462879324498, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6843,7 +6879,7 @@ PrefabInstance:
       objectReference: {fileID: 1097357891}
     - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: _energy
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: AttackForce
@@ -6860,6 +6896,10 @@ PrefabInstance:
     - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
       propertyPath: obstacleWeight
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236328462879324502, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
+      propertyPath: speedDirection
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6584fd6ebd5ae884cbe28a1f2b5d8423, type: 3}
